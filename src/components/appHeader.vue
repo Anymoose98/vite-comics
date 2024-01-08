@@ -84,7 +84,8 @@ a {
 }
 
 a:hover {
-    color: rgb(35, 146, 250)
+    color: rgb(35, 146, 250);
+    border-bottom: 2px solid rgb(35, 146, 250);
 }
 
 .col {

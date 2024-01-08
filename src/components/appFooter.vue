@@ -159,8 +159,13 @@ ul {
     font-size: 20px;
 }
 
+li:hover {
+    color: rgb(35, 146, 250)
+}
+
 li {
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .margin-top-20 {

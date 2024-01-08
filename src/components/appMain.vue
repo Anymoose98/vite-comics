@@ -66,6 +66,12 @@ export default {
 
 .white {
     color: white;
+    cursor: pointer;
+}
+
+.white:hover {
+    border-bottom: 2px solid rgb(0, 0, 0);
+    /* Aggiunge una linea blu sotto il link al passaggio del mouse */
 }
 
 img {
