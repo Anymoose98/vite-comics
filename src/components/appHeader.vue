@@ -63,7 +63,8 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 ul {

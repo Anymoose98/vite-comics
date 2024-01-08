@@ -1,6 +1,32 @@
 <script>
 export default {
-
+    name: 'appMain',
+    data() {
+        return {
+            icone: [
+                {
+                    img: "../assets/img/buy-comics-digital-comics.png",
+                    titolo: "DIGITAL COMICS"
+                },
+                {
+                    img: "../assets/img/buy-comics-merchandise.png",
+                    titolo: "DC MERCHANDISE"
+                },
+                {
+                    img: "../assets/img/buy-comics-subscriptions.png",
+                    titolo: "SUBSCRIPTION"
+                },
+                {
+                    img: "../assets/img/buy-comics-shop-locator.png",
+                    titolo: "COMIC SHOP LOCATOR"
+                },
+                {
+                    img: "../assets/img/buy-comics-digital-comics.png",
+                    titolo: "DC POWER VISA"
+                },
+            ]
+        }
+    },
 }
 </script>
 
@@ -14,7 +40,15 @@ export default {
 
         <div class="container-celeste">
             <div class="contenuto-celeste">
-
+                <ul>
+                    <li v-for="(icone, index) in icone" :key="index">
+                        <div class="d-flex">
+                            <img src= "../assets/img/buy-comics-digital-comics.png" :alt="icone.titolo">
+                            <div class="white">{{ icone.titolo }}</div>
+                        </div>
+                    </li>
+                    
+                </ul>
             </div>
         </div>
     </main>
@@ -22,10 +56,34 @@ export default {
 
 
 <style lang="scss" scoped>
-* {
-    margin: 0;
+.d-flex {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+
 }
 
+.white {
+    color: white;
+}
+
+img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+li {
+    margin-right: 10px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+}
 
 .container-nero {
     background-color: black;
