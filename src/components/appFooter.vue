@@ -99,7 +99,7 @@ export default {
     <footer>
         <div class="contenitore-ul">
             <div>
-                <h2>DC COMICS</h2>
+                <h2 class="margin-top-20">DC COMICS</h2>
                 <ul>
                     <li v-for="(comics, index) in comics" :key="index">
                         <div>{{comics.titolo}}</div>
@@ -130,6 +130,7 @@ export default {
                     </li>
                 </ul>
             </div>
+            <div class="img-logo"></div>
         </div>
     </footer>
 </template>
@@ -139,7 +140,7 @@ footer {
     background-image: url(../assets/img/footer-bg.jpg);
     background-size: cover;
     position: relative;
-    padding-bottom: 30px;
+
 }
 
 
@@ -147,8 +148,8 @@ footer {
 .contenitore-ul {
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 40px;
     display: flex;
+
 }
 
 h2 {
@@ -176,6 +177,18 @@ li {
 }
 
 .margin-left-40 {
+    margin-top: 40px;
     margin-left: 40px;
+    margin-bottom: 50px;
+}
+
+.img-logo {
+    background-image: url("../assets/img/dc-logo-bg.png");
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: 50px;
 }
 </style>
