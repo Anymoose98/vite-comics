@@ -113,7 +113,8 @@ ul {
 
 .contenuto-celeste {
     max-width: 1200px;
-    height: 150px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     margin: 0 auto;
     display: flex;
     align-items: center

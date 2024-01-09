@@ -137,9 +137,12 @@ export default {
 <style lang="scss" scoped>
 footer {
     background-image: url(../assets/img/footer-bg.jpg);
-    background-size: 100% auto;
-    height: 482px;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 30px;
 }
+
+
 
 .contenitore-ul {
     max-width: 1200px;
