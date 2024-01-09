@@ -1,6 +1,13 @@
 <script>
+import dcCard from './_dcCard.vue'
+
 export default {
     name: 'appMain',
+    components: {
+        dcCard
+    },
+
+
     data() {
         return {
             icone: [
@@ -26,7 +33,7 @@ export default {
                 },
             ],
 
-            dc_comics: [
+            dcComics: [
                 {
                     "thumb": "https://www.coverbrowser.com/image/action-comics/1-1.jpg",
                     "price": "$19.99",
@@ -117,12 +124,7 @@ export default {
 
         <div class="container-nero">
             <div class="contenuto-nero">
-                <div  v-for="(dc_comics, index) in dc_comics" :key="index" class="card">
-                    <img :src="getImagePath(dc_comics.thumb)" alt="" class="img-card">
-                    <h4>{{dc_comics.series}}</h4>
-                </div>
-
-      
+              <dcCard v-for="dcComics, index in dcComics" :key="index" :dcComics="dcComics"/>
             </div>
         </div>
 
@@ -157,20 +159,6 @@ export default {
     align-items: center;
 }
 
-.card {
-    width: calc(100% / 6 - 30px);
-    margin: 15px;
-    margin-top: 30px;
-    height: 250px;
-    margin-bottom: 50px;
-}
-
-.img-card {
-    width: 100%;
-    height: 200px;
-    position: relative;
-}
-
 .card-icone {
     width: calc(100% / 5);
 }
@@ -187,11 +175,6 @@ export default {
     width: 100%;
 }
 
-h4 {
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
-}
 
 .white:hover {
     border-bottom: 2px solid rgb(0, 0, 0);
