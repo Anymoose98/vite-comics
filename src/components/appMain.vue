@@ -117,45 +117,12 @@ export default {
 
         <div class="container-nero">
             <div class="contenuto-nero">
-                <div class="card">
-                    <img src="https://www.coverbrowser.com/image/action-comics/1-1.jpg" alt="" class="img-card">
-                    <h3>action-comics</h3>
+                <div  v-for="(dc_comics, index) in dc_comics" :key="index" class="card">
+                    <img :src="getImagePath(dc_comics.thumb)" alt="" class="img-card">
+                    <h4>{{dc_comics.series}}</h4>
                 </div>
 
-                <div class="card">
-                    <img src="https://www.coverbrowser.com/image/action-comics/1-1.jpg" alt="" class="img-card">
-                    <h3>action-comics</h3>
-                </div>
-
-                <div class="card">
-                    <img src="https://www.coverbrowser.com/image/action-comics/1-1.jpg" alt="" class="img-card">
-                    <h3>action-comics</h3>
-                </div>
-
-                <div class="card">
-                    <img src="https://www.coverbrowser.com/image/action-comics/1-1.jpg" alt="" class="img-card">
-                    <h3>action-comics</h3>
-                </div>
-
-                <div class="card">
-                    <img src="https://www.coverbrowser.com/image/action-comics/1-1.jpg" alt="" class="img-card">
-                    <h3>action-comics</h3>
-                </div>
-
-                <div class="card">
-                    <img src="https://www.coverbrowser.com/image/action-comics/1-1.jpg" alt="" class="img-card">
-                    <h3>action-comics</h3>
-                </div>
-
-                <div class="card">
-                    <img src="https://www.coverbrowser.com/image/action-comics/1-1.jpg" alt="" class="img-card">
-                    <h3>action-comics</h3>
-                </div>
-
-                <div class="card">
-                    <img src="https://www.coverbrowser.com/image/action-comics/1-1.jpg" alt="" class="img-card">
-                    <h3>action-comics</h3>
-                </div>
+      
             </div>
         </div>
 
@@ -194,10 +161,14 @@ export default {
     width: calc(100% / 6 - 30px);
     margin: 15px;
     margin-top: 30px;
+    height: 250px;
+    margin-bottom: 50px;
 }
 
 .img-card {
     width: 100%;
+    height: 200px;
+    position: relative;
 }
 
 .card-icone {
@@ -216,9 +187,10 @@ export default {
     width: 100%;
 }
 
-h3 {
+h4 {
     color: white;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .white:hover {

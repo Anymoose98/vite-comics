@@ -98,8 +98,8 @@ export default {
 <template lang="">
     <footer>
         <div class="contenitore-ul">
-            <div>
-                <h2 class="margin-top-20">DC COMICS</h2>
+            <div class="col-dc-comics">
+                <h2 class="margin-top-40">DC COMICS</h2>
                 <ul>
                     <li v-for="(comics, index) in comics" :key="index">
                         <div>{{comics.titolo}}</div>
@@ -172,9 +172,18 @@ li {
     cursor: pointer;
 }
 
+.col-dc-comics {
+    width: 250px;
+}
+
+.margin-top-40 {
+    margin-top: 40px;
+}
+
 .margin-top-20 {
     margin-top: 20px;
 }
+
 
 .margin-left-40 {
     margin-top: 40px;
